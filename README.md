@@ -1,33 +1,34 @@
-Krishna Car Interior Website
+# Krishna Car Interior Website
 
-A design-focused web project inspired by the concept of a modern, premium car interior and accessories showroom.
+A design-focused web project inspired by a modern, premium car interior and accessories showroom.
 
-This project focuses on clean UI, clear service presentation, and a simple layout that helps customers easily explore car services and accessories.
+This project focuses on clean UI, simple navigation, and clear presentation of car services and products for customers.
 
-Features
+---
 
-Responsive multi-page layout
+## Features
+- Responsive multi-page layout
+- Professional and modern design
+- Clear services and accessories sections
+- WhatsApp enquiry and Google Maps integration
+- Optimized for desktop and mobile devices
 
-Clean and professional design
+---
 
-Well-structured services and products sections
+## Tech Stack
+- HTML
+- CSS
 
-Google Maps integration for exact shop location
+---
 
-Optimized for desktop and mobile viewing
+## Purpose
+This project was created as a real-world business website to practice layout structuring, UI design, and customer-focused presentation.
 
-Tech Stack
+---
 
-HTML
+## Live Demo
+*https://krishnacarinterior.netlify.app/*
 
-CSS
-
-Purpose
-
-This project was built to practice real-world website design for a local business, focusing on usability, layout structure, and customer-friendly presentation.
-
-Live Demo
-
-(Add your website link here)
+---
 
 Built as a hands-on learning and freelance project.
