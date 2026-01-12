@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================= ROOT VARIABLES ================= */
+
+:root{
+  --dark:#0a0a0f;
+  --dark-soft:#141428;
+
+  --pink:#ff2f92;
+  --pink-dark:#e11d74;
+  --cyan:#22d3ee;
+  --yellow:#facc15;
+  --green:#4ade80;
+
+  --accent: linear-gradient(135deg, var(--pink), var(--cyan));
+  --accent-dark: linear-gradient(135deg, var(--pink-dark), var(--cyan));
+
+  --bg:#f8fafc;
+  --card:#ffffff;
+
+  --text:#1e293b;
+  --muted:#475569;
+}
+
+/* ================= BASE ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+.site-header{
+  background:var(--dark-soft);
+  padding:16px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-wrap img{
+  height:160px;
+}
+
+.brand-text{
+  color:white;
+  font-weight:600;
+  font-size:18px;
+}
+
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#cbd5e1;
+  font-weight:500;
+}
+
+.nav-links a:hover{
+  color:var(--cyan);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  background:
+    linear-gradient(120deg, rgba(15,23,42,.92), rgba(30,41,59,.92)),
+    url('hero.jpg');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:110px 8%;
+}
+
+.hero h2{
+  font-size:42px;
+  font-weight:700;
+  max-width:720px;
+}
+
+.hero p{
+  margin-top:14px;
+  font-size:18px;
+  max-width:600px;
+  color:#e5e7eb;
+}
+
+/* HERO BUTTON FIX */
+.hero .btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 44px;
+  background:var(--accent);
+  color:#0a0a0f;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 14px 32px rgba(255,47,146,.35);
+  transition:.3s ease;
+}
+
+.hero .btn:hover{
+  background:var(--accent-dark);
+  transform:translateY(-3px);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:42px;
+  color:#020617;
+}
+
+/* ================= GENERIC CARDS ================= */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card,
+.service-card{
+  background:var(--card);
+  padding:34px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(15,23,42,.08);
+  transition:.35s ease;
+}
+
+.card:hover,
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 35px 70px rgba(15,23,42,.15);
+}
+
+.card img,
+.service-card img{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:18px;
+  background:#e2e8f0;
+}
+
+.card h3,
+.service-card h3{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.card p,
+.service-card p{
+  font-size:15px;
+  color:var(--muted);
+}
+
+/* ================= ABOUT PAGE ================= */
+
+/* GRID */
+.about-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+/* IMAGE */
+.about-image img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.18);
+}
+
+/* ABOUT CTA */
+.about-btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:14px 38px;
+  background:var(--accent);
+  color:#0a0a0f;
+  font-weight:700;
+  border-radius:40px;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(255,47,146,.35);
+  transition:.3s ease;
+}
+
+.about-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(34,211,238,.45);
+}
+
+/* ABOUT SERVICE BOXES — FINAL */
+.about-cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:26px;
+  margin-top:34px;
+}
+
+.about-cards a.about-card{
+  display:block;
+  background:#ffffff;
+  padding:22px 26px;
+  border-radius:20px;
+  text-decoration:none;
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+  border-left:6px solid var(--pink);
+  transition:.35s ease;
+}
+
+.about-cards a.about-card h3{
+  margin:0 0 6px;
+  font-size:18px;
+  font-weight:600;
+  color:#0b1020;
+}
+
+.about-cards a.about-card p{
+  margin:0;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+.about-cards a.about-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 65px rgba(124,58,237,.25);
+  border-left-color:var(--cyan);
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+/* ================= MAP ================= */
+
+.map-wrap{
+  margin-top:40px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--dark);
+  color:#cbd5e1;
+  padding:50px 8%;
+  text-align:center;
+  font-size:14px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#22c55e;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 18px 35px rgba(0,0,0,.25);
+}
+
+.whatsapp img{
+  width:30px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  .site-header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .hero{
+    padding:80px 6%;
+    text-align:center;
+  }
+
+  .hero h2{
+    font-size:30px;
+  }
+
+  section{
+    padding:55px 6%;
+  }
+}
+/* ===== FINAL ABOUT SERVICE BOXES (WORKING) ===== */
+
+.about-cards{
+  display:grid;
+  gap:26px;
+  margin-top:30px;
+}
+
+.about-card{
+  display:block;
+  background:#ffffff;
+  padding:22px 26px;
+  border-radius:20px;
+  text-decoration:none;
+  box-shadow:0 18px 45px rgba(0,0,0,.12);
+  border-left:6px solid #ff2f92;
+  transition:all .3s ease;
+}
+
+.about-card h3{
+  margin:0 0 6px;
+  font-size:18px;
+  font-weight:600;
+  color:#0b1020;
+}
+
+.about-card p{
+  margin:0;
+  font-size:14px;
+  color:#475569;
+}
+
+.about-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 28px 60px rgba(255,47,146,.25);
+  border-left-color:#22d3ee;
+}
+/* ================= ENQUIRE BUTTON (SERVICES & PRODUCTS) ================= */
+
+.service-card a,
+.card a{
+  display:inline-block;
+  margin-top:14px;
+  padding:10px 28px;
+  background: var(--accent);
+  color:#0a0a0f;
+  font-weight:600;
+  font-size:14px;
+  border-radius:30px;
+  text-decoration:none;
+  box-shadow:0 10px 24px rgba(255,47,146,.35);
+  transition:all .3s ease;
+}
+
+/* Hover effect */
+.service-card a:hover,
+.card a:hover{
+  background: var(--accent-dark);
+  transform:translateY(-2px);
+  box-shadow:0 16px 32px rgba(34,211,238,.4);
+}
+/* SERVICES GRID – 3 PER ROW */
+.services-grid,
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 👈 3 in each row */
+  gap: 30px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .services-grid,
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .services-grid,
+  .cards {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
